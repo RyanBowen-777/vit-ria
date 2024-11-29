@@ -1,0 +1,135 @@
+/* Reset básico */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+ 
+  header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #945d85;
+  }
+  
+  /* Banner com efeito */
+  .banner {
+    position: relative;
+    height: 60vh;
+    background: url('https://lojavivara.vtexassets.com/assets/vtex.file-manager-graphql/images/7e8dd252-515c-4dcd-bd2a-485b320aaecb___b1be37be3a8ebfc3c0e61cb3ed10e1c7.png') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+  }
+  
+  .banner .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+  }
+
+  #checkbox{
+    width: 30px;
+    height: 30px;
+  }
+  
+  .banner-content {
+    position: relative;
+    z-index: 2;
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+  
+  /* Seção do formulário */
+  .form-section {
+    padding: 2rem;
+    background: #fff;
+    text-align: center;
+  }
+  
+  .form-section h2 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+    color: #444;
+  }
+  
+  .promo-form {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .promo-form label {
+    text-align: left;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .promo-form input {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .promo-form button {
+    padding: 0.7rem;
+    border: none;
+    background: #da627d;
+    color: #fff;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .promo-form button:hover {
+    background: #fb6f92;
+  }
+  
+  /* Responsividade */
+  /* A partir de telas menores (tablets e celulares) */
+  @media (max-width: 768px) {
+    /* Torna o banner menor para telas pequenas */
+    .banner {
+      height: 40vh;
+    }
+  
+    .banner-content h1 {
+      font-size: 1.5rem;
+    }
+  
+    .banner-content p {
+      font-size: 1rem;
+    }
+  
+    /* Ajusta o formulário */
+    .promo-form {
+      width: 90%;
+    }
+  
+    .promo-form button {
+      font-size: 0.9rem;
+    }
+  }
+  
